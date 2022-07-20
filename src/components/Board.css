@@ -1,0 +1,24 @@
+.board {
+	display: grid;
+	outline: 3px solid black;
+	width: fit-content;
+	margin-top: 1rem;
+}
+
+.board__square {
+	background-color: #e2f1f6;
+	border: 1px solid black;
+	min-width: 100px;
+	min-height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.board__square.selected {
+	background: lightpink;
+}
+
+.board__square.correct {
+	background: lightgreen;
+}

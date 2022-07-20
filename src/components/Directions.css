@@ -1,0 +1,16 @@
+.directions {
+	display: flex;
+	flex-wrap: wrap;
+	outline: 3px solid black;
+	margin-top: 1rem;
+}
+
+.directions__square {
+	background-color: #e2f1f6;
+	border: 1px solid black;
+	min-width: 50px;
+	min-height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
