@@ -1,5 +1,5 @@
 const BOARD_SIZE = 3;
-const STEP_COUNT = 5;
+const STEP_COUNT = 10;
 
 const Dir = {
 	Left: "Left",
