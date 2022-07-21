@@ -18,7 +18,7 @@ function Board({ size }) {
 			{Array.from({ length: size * size }).map((v, i) => {
 				const userSelected = userMarker !== -1 && userMarker === i;
 				const startMarkerText = startMarker === i ? "Start" : "";
-				const endMarkerText = status === GameStatus.Ended && endMarker === i ? "End" : "";
+				const endMarkerText = status === GameStatus.Ended && (endMarker === i && !isCorrect) ? "End" : "";
 				const userSelectedStyle = userSelected ? (isCorrect ? "correct" : "selected") : "";
 				return (
 					<BoardSquare id={i} key={i} className={userSelectedStyle}>

@@ -3,9 +3,22 @@ import { Dir } from "../consts";
 import { memo, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setGameReady } from "../store/actions";
+import ArrowLeft from "../assets/arrows-left.svg";
+import ArrowRight from "../assets/arrows-right.svg";
+import ArrowTop from "../assets/arrows-top.svg";
+import ArrowBottom from "../assets/arrows-bottom.svg";
 
-const DirSquare = memo(function Square({ children }) {
-	return <div className="directions__square">{children}</div>;
+const ArrowDirs = {
+	[Dir.Left]: ArrowLeft,
+	[Dir.Right]: ArrowRight,
+	[Dir.Up]: ArrowTop,
+	[Dir.Down]: ArrowBottom,
+}
+
+const DirSquare = memo(function Square({ dir }) {
+	return <div className="directions__square">
+		{dir && <img alt={dir} src={ArrowDirs[dir]} />}
+	</div>;
 });
 
 function Directions() {
@@ -35,7 +48,7 @@ function Directions() {
 	return (
 		<div className="directions">
 			{directions.map((v, i) => (
-				<DirSquare key={i}>{i < index ? Object.keys(Dir)[v] : ""}</DirSquare>
+				<DirSquare key={i} dir={i < index ? v : ""} />
 			))}
 		</div>
 	);

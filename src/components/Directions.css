@@ -1,16 +1,17 @@
 .directions {
 	display: flex;
 	flex-wrap: wrap;
-	outline: 3px solid black;
 	margin-top: 1rem;
+	gap: 5px;
 }
 
 .directions__square {
 	background-color: #e2f1f6;
-	border: 1px solid black;
-	min-width: 50px;
-	min-height: 50px;
+	min-width: 60px;
+	min-height: 60px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	box-shadow: inset 1px -5px 0 #88c0d3;
+	border-radius: 5px;
 }
